@@ -1,41 +1,54 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+# ==========================================
+# 1. Android & Java / Gradle (Legacy Module)
+# ==========================================
+.gradle/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aar
+*.keystore
 
-# dependencies
+# Local configuration file (SDK path, local properties)
+local.properties
+
+# ==========================================
+# 2. React Native & Expo (Modern Module)
+# ==========================================
 node_modules/
-
-# Expo
 .expo/
 dist/
 web-build/
 expo-env.d.ts
+.metro-health-check*
+*.tsbuildinfo
 
-# Native
-.kotlin/
-*.orig.*
+# Debug & Logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# ==========================================
+# 3. IDE & System Files
+# ==========================================
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# macOS & Windows system files
+.DS_Store
+Thumbs.db
+
+# Secrets & Environment variables
+.env*.local
+.env
+*.pem
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
-
-# Metro
-.metro-health-check*
-
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macOS
-.DS_Store
-*.pem
-
-# local env files
-.env*.local
-
-# typescript
-*.tsbuildinfo
-
-# generated native folders
-/ios
-/android
